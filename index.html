@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<title>JavaScript Format Date - yyyy-mm-dd</title>
+
+<body>
+  <h2>JavaScript Format Date</h2>
+  <p id="demo"></p>
+
+  <iframe src='' frameborder='0' width='300' height='169' scrolling='no'></iframe>
+
+  <script>
+
+    function formatDate() {
+      let fullDate = new Date()
+
+      let day = fullDate.getDate();
+      let month = fullDate.getMonth() + 1;
+      let year = fullDate.getFullYear();
+
+      day = (day < 10) ? '0' + day : day;
+      month = (month < 10) ? '0' + month : month;
+      const date = [year, month, day].join('-');
+      return date;
+    }
+    document.querySelector("#demo").innerHTML = formatDate();
+  </script>
+</body>
+
+</html>
